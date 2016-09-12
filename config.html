@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>DCL Checker</title>
+  <link rel="stylesheet" href="css/config.css"/>
+</head>
+
+<body>
+<form id="frmImage">
+  <fieldset>
+    <legend>画像</legend>
+    <ul>
+      <li>
+        <label for="txtImagePath">画像パス : </label>
+        <input type="text" name="txtImagePath" id="txtImagePath" value="/debug.png"/>
+      </li>
+      <li>
+        <label for="txtImageParentTag">親タグ : </label>
+        <input type="text" name="txtImageParentTag" id="txtImageParentTag" value=".wrapper"/>
+      </li>
+      <li>
+        <label for="btnImage">&nbsp;</label>
+        <input type="button" name="btnImage" id="btnImage" value="画像決定"/>
+      </li>
+    </ul>
+  </fieldset>
+</form>
+  <fieldset>
+    <legend>位置</legend>
+    <ul>
+      <li>
+        <label for="txtImagePositionX">X : </label>
+        <input type="text" name="txtImagePositionX" id="txtImagePositionX" value="0"/>
+      </li>
+      <li>
+        <label for="txtImagePositionY">Y : </label>
+        <input type="text" name="txtImagePositionY" id="txtImagePositionY" value="0"/>
+      </li>
+    </ul>
+  </fieldset>
+</body>
+
+<script src="js/jquery-3.0.0.min.js"></script>
+<script src="js/config.js"></script>
+
+</html>
