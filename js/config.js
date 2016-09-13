@@ -1,29 +1,26 @@
-(function() {
-  main = function() {
-    var bgWindow = chrome.extension.getBackgroundPage();
-    var tabUrl = encodeURIComponent( bgWindow.getUrl());
-console.log(tabUrl);
-    chrome.storage.local.get([tabUrl], function(items) {
-console.log(items);
-      $("#txtImagePath").val(items[tabUrl].imagePath);
-      $("#txtImageParentTag").val(items[tabUrl].imageParentTag);
+var tabUrl = "";
+
+(function(){
+  main = function(){
+    chrome.tabs.query({active: true}, function(tabs){
+      tabUrl = encodeURIComponent(tabs[0].url);
+      chrome.storage.local.get([tabUrl], function(items){
+        $("#txtImagePath").val(items[tabUrl].imagePath);
+        $("#txtImageParentTag").val(items[tabUrl].imageParentTag);
+      });
     });
-  /*chrome.storage.local.get('options', function(data) {
-      return $('#form input').each(function() {
+
+  /*chrome.storage.local.get('options', function(data){
+      return $('#form input').each(function(){
         this.checked = data.options[this.name];
         return null;
       });
     });*/
     $('#btnImage').click(function(e){
 console.log("Clicked #btnImage.");
-      chrome.runtime.sendMessage({
-        type: 'getConfig',
-      });
       var imagePath = $("#txtImagePath").val();
       var imageParentTag = $("#txtImageParentTag").val();
-console.log(imagePath);
 
-      //var tabUrl = encodeURIComponent(tab.url);
       var imageInformations = {};
       imageInformations[tabUrl] = {
         'imagePath':imagePath,
