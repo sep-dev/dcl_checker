@@ -1,0 +1,10 @@
+.dclchecker_img{
+  position:absolute;
+  opacity:0.4;
+  top:0px;
+  left:0px;
+  z-index:2147483646 !important;
+}
+.dclchecker_img:hover{
+  opacity:0;
+}
