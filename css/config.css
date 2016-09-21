@@ -8,13 +8,31 @@ body, button {
 body{
   font-size:75%;
   line-height:1.0;
-  min-width: 300px;
+  min-width: 200px;
+}
+ul{
+  padding-left:0px;
 }
 ul li{
   list-style: none;
 }
+ul li input{
+  width:100px;
+}
+fieldset.position ul li input{
+  width:50px;
+}
+fieldset.opacity ul li input{
+  width:50px;
+}
 label{
-  /*margin-right: 10px;*/
-  width:70px;
+  width:55px;
   float:left;
+}
+div{
+  text-align:center;
+  margin:5px 0;
+}
+div input{
+  width:90%;
 }

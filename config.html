@@ -8,37 +8,48 @@
 
 <body>
 <form id="frmImage">
-  <fieldset>
+  <div>
+    <input type="button" name="btnImageRemove" id="btnImageRemove" value="削除"/>
+  </div>
+  <fieldset class="image">
     <legend>画像</legend>
     <ul>
       <li>
-        <label for="txtImagePath">画像パス : </label>
+        <label for="txtImagePath">パス : </label>
         <input type="text" name="txtImagePath" id="txtImagePath" value="/debug.png"/>
       </li>
       <li>
         <label for="txtImageParentTag">親タグ : </label>
         <input type="text" name="txtImageParentTag" id="txtImageParentTag" value=".wrapper"/>
       </li>
-      <li>
-        <label for="btnImage">&nbsp;</label>
-        <input type="button" name="btnImage" id="btnImage" value="画像決定"/>
-      </li>
     </ul>
   </fieldset>
-</form>
-  <fieldset>
+  <fieldset class="position">
     <legend>位置</legend>
     <ul>
       <li>
-        <label for="txtImagePositionX">X : </label>
-        <input type="text" name="txtImagePositionX" id="txtImagePositionX" value="0"/>
+        <label for="txtImagePositionX">left : </label>
+        <input type="text" name="txtImagePositionX" id="txtImagePositionX" value="0"/>px
       </li>
       <li>
-        <label for="txtImagePositionY">Y : </label>
-        <input type="text" name="txtImagePositionY" id="txtImagePositionY" value="0"/>
+        <label for="txtImagePositionY">top : </label>
+        <input type="text" name="txtImagePositionY" id="txtImagePositionY" value="0"/>px
       </li>
     </ul>
   </fieldset>
+  <fieldset class="opacity">
+    <legend>透過</legend>
+    <ul>
+      <li>
+        <label for="txtImageOpacity">opacity : </label>
+        <input type="text" name="txtImageOpacity" id="txtImageOpacity" value="0.5"/>
+      </li>
+    </ul>
+  </fieldset>
+  <div>
+    <input type="button" name="btnImage" id="btnImage" value="反映"/>
+  </div>
+</form>
 </body>
 
 <script src="js/jquery-3.0.0.min.js"></script>
