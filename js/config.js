@@ -48,8 +48,8 @@ var tabUrl = "";
       });
     });
 
-    $('#txtImagePositionX').keyup(function(e){
-      console.log("Changed #txtImagePositionX.");
+    $('#txtImagePositionX').bind('keyup mouseup', function(e){
+      console.log("keyup #txtImagePositionX.");
       var imagePositionX = $("#txtImagePositionX").val();
       chrome.storage.local.get([tabUrl], function(items){
         items[tabUrl].imagePositionX = imagePositionX;
@@ -61,7 +61,7 @@ var tabUrl = "";
       });
     });
 
-    $('#txtImagePositionY').keyup(function(e){
+    $('#txtImagePositionY').bind('keyup mouseup', function(e){
       console.log("Changed #txtImagePositionY.");
       var imagePositionY = $("#txtImagePositionY").val();
       chrome.storage.local.get([tabUrl], function(items){
@@ -74,7 +74,7 @@ var tabUrl = "";
       });
     });
 
-    $('#txtImageOpacity').keyup(function(e){
+    $('#txtImageOpacity').bind('keyup mouseup', function(e){
       console.log("Changed #txtImageOpacity.");
       var imageOpacity = $("#txtImageOpacity").val();
       chrome.storage.local.get([tabUrl], function(items){
