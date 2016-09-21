@@ -14,7 +14,6 @@ var tabUrl = "";
     });
 
     $('#btnImage').click(function(e){
-      console.log("Clicked #btnImage.");
       var imagePath = $("#txtImagePath").val();
       var imageParentTag = $("#txtImageParentTag").val();
       var imagePositionX = $("#txtImagePositionX").val();
@@ -49,7 +48,6 @@ var tabUrl = "";
     });
 
     $('#txtImagePositionX').bind('keyup mouseup', function(e){
-      console.log("keyup #txtImagePositionX.");
       var imagePositionX = $("#txtImagePositionX").val();
       chrome.storage.local.get([tabUrl], function(items){
         items[tabUrl].imagePositionX = imagePositionX;
@@ -62,7 +60,6 @@ var tabUrl = "";
     });
 
     $('#txtImagePositionY').bind('keyup mouseup', function(e){
-      console.log("Changed #txtImagePositionY.");
       var imagePositionY = $("#txtImagePositionY").val();
       chrome.storage.local.get([tabUrl], function(items){
         items[tabUrl].imagePositionY = imagePositionY;
@@ -75,7 +72,6 @@ var tabUrl = "";
     });
 
     $('#txtImageOpacity').bind('keyup mouseup', function(e){
-      console.log("Changed #txtImageOpacity.");
       var imageOpacity = $("#txtImageOpacity").val();
       chrome.storage.local.get([tabUrl], function(items){
         items[tabUrl].imageOpacity = imageOpacity;
