@@ -1,6 +1,5 @@
 (function(){
   chrome.runtime.onMessage.addListener(function(message){
-    console.log('background.js:'+message.type);
     chrome.tabs.query({active: true}, function(tabs){
       var tab = tabs[0];
       //todo:if else の羅列はカッコ悪いので、switchかmapに直す。
